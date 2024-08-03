@@ -1,5 +1,5 @@
 <!-- Proje Başlığı -->
-<h1 align="center">42 - Philosophers 🧠🍽️</h1>
+<h1 align="center">42 - Philosophers 🍽️</h1>
 
 <!-- Proje Açıklaması -->
 <p align="center">
