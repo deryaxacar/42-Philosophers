@@ -41,21 +41,21 @@
 ## Kullanım Senaryoları 📝
 <p>Bu projeyi kullanarak farklı senaryoları deneyimleyebilirsiniz. İşte bazı önerilen kullanım senaryoları ve her birinin detayları:</p>
 
-## 1: Belirli Sayıda Felsefeciyle Simülasyonu Başlatma
+### 1: Belirli Sayıda Felsefeciyle Simülasyonu Başlatma
 Simülasyonu başlatırken, felsefeci sayısını belirlemek önemlidir. Daha fazla felsefeci, senkronizasyon sorunlarını artırabilir. Önerilen kullanım adımları şunlardır:
 
 1. **Felsefeci Sayısını Seçin:** Simülasyon başlarken kaç felsefeciyle çalışacağınızı belirleyin. Felsefeci sayısı arttıkça senkronizasyon zorlukları da artar.
 2. **Simülasyonu Başlatın 🚀:** Seçilen felsefeci sayısıyla simülasyonu çalıştırın ve senkronizasyon sorunlarını gözlemleyin.
 3. **Çıktıyı Analiz Edin 🔍:** Simülasyon çıktısını inceleyin. Felsefecilerin yemek yeme ve düşünme sürelerini kontrol edin. Kilitlenme ve açlık gibi durumları gözlemleyin.
 
-## 2: Kilitleme Stratejilerini Test Etme
+### 2: Kilitleme Stratejilerini Test Etme
 Farklı kilitleme stratejilerini test etmek, kilitlenme ve açlık durumlarını önlemede yardımcı olabilir. Bu senaryoda, kilitleme tekniklerini değiştirerek felsefecilerin davranışını gözlemleyin:
 
 1. **Kilitleme Stratejisini Değiştirin 🔄:** Farklı kilitleme teknikleri kullanarak çatal alma ve bırakma süreçlerini değiştirin. Örneğin, mutex kilitleme, semafor veya başka bir senkronizasyon yöntemi kullanabilirsiniz.
 2. **Simülasyonu Tekrar Çalıştırın 🔄:** Kilitleme stratejisini değiştirdikten sonra simülasyonu yeniden çalıştırın. Felsefecilerin çatal alma davranışını ve senkronizasyonu gözlemleyin.
 3. **Sonuçları Karşılaştırın ⚖️:** Farklı kilitleme stratejileriyle elde edilen sonuçları karşılaştırın. Kilitlenme veya açlık durumlarının nasıl etkilendiğini inceleyin.
 
-## 3: Farklı Senkronizasyon Mekanizmalarını Deneyin
+### 3: Farklı Senkronizasyon Mekanizmalarını Deneyin
 Senkronizasyon sorunlarını çözmek için çeşitli mekanizmalar kullanılabilir. Bu senaryoda, farklı senkronizasyon mekanizmalarını deneyerek en iyi çözümü bulmaya çalışın:
 
 1. **Farklı Senkronizasyon Mekanizmalarını Seçin 🧩:** Mutex kilitleme, semaforlar, kritik bölgeler gibi çeşitli senkronizasyon tekniklerini kullanarak simülasyonu deneyin.
