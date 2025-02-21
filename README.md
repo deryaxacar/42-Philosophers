@@ -80,7 +80,7 @@ Bu senaryoda, ortaya çıkan senkronizasyon sorunlarını analiz ederek uygun ç
 
 <!-- Lisans -->
 ## Lisans 📜
-<p>Bu proje, <a href="LICENSE">MIT Lisansı</a> kapsamında lisanslanmıştır. Lisans detaylarını öğrenmek için lütfen lisans dosyasını kontrol edin.</p> sss
+<p>Bu proje, <a href="LICENSE">MIT Lisansı</a> kapsamında lisanslanmıştır. Lisans detaylarını öğrenmek için lütfen lisans dosyasını kontrol edin.</p>
 
 ---
 
