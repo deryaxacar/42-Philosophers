@@ -84,5 +84,5 @@ Bu senaryoda, ortaya çıkan senkronizasyon sorunlarını analiz ederek uygun ç
 
 ---
 
-<p align="center">© 2025 This project was created by Derya ACAR.</p>
+<p align="center">2025 This project was created by Derya ACAR.</p>
 
