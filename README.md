@@ -1,88 +1,87 @@
-<!-- Proje Başlığı -->
+<!-- Project Title -->
 <h1 align="center">42 - Philosophers 🍽️</h1>
 
-<!-- Proje Açıklaması -->
+<!-- Project Description -->
 <p align="center">
-  Bu proje, klasik "Felsefecilerin Yemek Problemi"ni simüle eder. Bu problem, bir grup felsefecinin yuvarlak bir masada oturup belirli kural ve kısıtlamalar altında yemek yemeye çalıştığı bir senaryoyu içerir. Felsefeciler, yemek yemek ve düşünmek için sırayla hareket ederken senkronizasyon, kilitlenme (deadlock) ve açlık (starvation) gibi problemlerin üstesinden gelmeye çalışır. Bu proje, paralel programlama, senkronizasyon ve iş parçacığı yönetimi konusunda deneyim kazanmanıza yardımcı olmayı hedefler.
+  This project simulates the classic "Dining Philosophers Problem." It involves a scenario where a group of philosophers sit around a circular table and attempt to eat under certain rules and constraints. The philosophers alternate between thinking and eating, attempting to avoid issues like deadlock and starvation. This project aims to provide experience in parallel programming, synchronization, and thread management.
 </p>
 
-<!-- Proje Logosu veya Görseli -->
+<!-- Project Logo -->
 <p align="center">
-  <a target="blank"><img src="https://i.hizliresim.com/xtvqc35.png" height="150" width="150" /></a>
+  <a target="blank"><img src="https://github.com/deryaxacar/42-Philosophers/blob/main/philosophers.png" height="150" width="150" /></a>
 </p>
 
-<!-- Projenin Amacı -->
-## Projenin Amacı 🎯
+<!-- Project Goals -->
+## Project Goals 🎯
 <p>
-  Bu proje, iş parçacıkları arasındaki senkronizasyonu, kritik kaynaklara erişim sırasında ortaya çıkabilecek sorunları ve bu tür sorunların çözülmesini anlamanıza yardımcı olmayı amaçlar. Proje, çeşitli senkronizasyon tekniklerini ve bu tekniklerin farklı senaryolarda nasıl uygulandığını incelemenize olanak tanır.
+  The project aims to help you understand synchronization between threads, the challenges of accessing shared resources, and solutions to such issues. You will explore different synchronization strategies and how they apply in concurrent environments.
 </p>
 
-<p>Projenin başlıca amaçları şunlardır:</p>
+<p>Main objectives of the project include:</p>
 <ul>
-  <li><strong>Senkronizasyon Mekanizmalarını Anlamak 🔄:</strong> Felsefecilerin çatal paylaşımı ve senkronizasyon sırasında karşılaşabileceği problemleri analiz etmek.</li>
-  <li><strong>Kilitlenme ve Açlığı Önlemek 🚫🍴:</strong> Kilitlenme veya açlık durumlarının neden meydana geldiğini anlamak ve bunları önlemek için kullanılan teknikleri öğrenmek.</li>
-  <li><strong>İş Parçacığı Yönetimi 👥:</strong> Paralel çalışan iş parçacıklarının kritik bölgelerde güvenli bir şekilde etkileşimde bulunmasını sağlamak.</li>
+  <li><strong>Understanding Synchronization Mechanisms 🔄:</strong> Analyze problems that may arise when philosophers share forks and synchronize their actions.</li>
+  <li><strong>Preventing Deadlock and Starvation 🚫🍴:</strong> Understand what causes deadlock or starvation and explore techniques to prevent them.</li>
+  <li><strong>Thread Management 👥:</strong> Ensure safe interaction of concurrently running threads in critical sections.</li>
 </ul>
 
-<!-- Proje Açıklaması -->
-## Proje Açıklaması 📜
+<!-- Project Explanation -->
+## Project Explanation 📜
 <p>
-  Felsefecilerin yemek yemesi için belirli kurallar uygulanır. Bir masada oturan felsefecilerin her biri yemek yemek için yanlarındaki çatalı almak zorundadır. Ancak masada her iki felsefecinin arasında bir çatal bulunduğundan, çatal paylaşımı sırasında senkronizasyon sorunları ortaya çıkabilir. Senkronizasyon sorunları, bir veya daha fazla felsefecinin yemek yiyememesine veya düşünememesine yol açabilir.
+  The philosophers must follow specific rules to eat. Each philosopher must take the fork to their left and right to eat. Since there’s only one fork between each pair of philosophers, synchronization issues can occur, potentially preventing philosophers from eating or thinking.
 </p>
 
-<p>Bu projede, çeşitli senkronizasyon stratejileri kullanılarak kilitlenme ve açlık sorunları çözülmeye çalışılır. İşte bazı senkronizasyon mekanizmaları:</p>
+<p>In this project, various synchronization strategies are implemented to avoid deadlock and starvation. Here are some of the mechanisms used:</p>
 <ul>
-  <li><strong>Kilitleme (Locking) 🔐:</strong> Çatalın alınması ve bırakılması sırasında kilit kullanılır. Bu, aynı anda birden fazla iş parçacığının çatalı almamasını sağlar.</li>
-  <li><strong>Semafor 🚦:</strong> Semaforlar, bir kaynağın kullanılabilirliğini kontrol etmek için kullanılır ve felsefecilerin çatalı alma sırasını düzenler.</li>
-  <li><strong>Kritik Bölge Yönetimi ⚠️:</strong> Felsefecilerin güvenli bir şekilde çatal alıp bırakmasını sağlamak için kritik bölgeler oluşturulur ve bu alanlara erişim kontrol edilir.</li>
+  <li><strong>Locking 🔐:</strong> Uses mutexes to ensure a fork cannot be picked up by more than one thread at a time.</li>
+  <li><strong>Semaphores 🚦:</strong> Manage the availability of forks and the order in which philosophers can pick them up.</li>
+  <li><strong>Critical Section Management ⚠️:</strong> Protect access to shared resources by defining safe regions of execution.</li>
 </ul>
 
-<!-- Kullanım Senaryoları -->
-## Kullanım Senaryoları 📝
-<p>Bu projeyi kullanarak farklı senaryoları deneyimleyebilirsiniz. İşte bazı önerilen kullanım senaryoları ve her birinin detayları:</p>
+<!-- Use Cases -->
+## Use Cases 📝
+<p>Use this project to experiment with different scenarios. Some recommended use cases include:</p>
 
-### 1: Belirli Sayıda Felsefeciyle Simülasyonu Başlatma
-Simülasyonu başlatırken, felsefeci sayısını belirlemek önemlidir. Daha fazla felsefeci, senkronizasyon sorunlarını artırabilir. Önerilen kullanım adımları şunlardır:
+### 1: Launching the Simulation with a Specific Number of Philosophers
+Start the simulation by defining the number of philosophers. The more philosophers, the higher the synchronization challenge.
 
-1. **Felsefeci Sayısını Seçin:** Simülasyon başlarken kaç felsefeciyle çalışacağınızı belirleyin. Felsefeci sayısı arttıkça senkronizasyon zorlukları da artar.
-2. **Simülasyonu Başlatın 🚀:** Seçilen felsefeci sayısıyla simülasyonu çalıştırın ve senkronizasyon sorunlarını gözlemleyin.
-3. **Çıktıyı Analiz Edin 🔍:** Simülasyon çıktısını inceleyin. Felsefecilerin yemek yeme ve düşünme sürelerini kontrol edin. Kilitlenme ve açlık gibi durumları gözlemleyin.
+1. **Choose the Number of Philosophers:** Select how many philosophers will participate.
+2. **Start the Simulation 🚀:** Run the program and observe the behavior.
+3. **Analyze the Output 🔍:** Check how often each philosopher eats and thinks. Watch for deadlock or starvation.
 
-### 2: Kilitleme Stratejilerini Test Etme
-Farklı kilitleme stratejilerini test etmek, kilitlenme ve açlık durumlarını önlemede yardımcı olabilir. Bu senaryoda, kilitleme tekniklerini değiştirerek felsefecilerin davranışını gözlemleyin:
+### 2: Testing Locking Strategies
+Test different locking strategies to reduce the risk of deadlock or starvation.
 
-1. **Kilitleme Stratejisini Değiştirin 🔄:** Farklı kilitleme teknikleri kullanarak çatal alma ve bırakma süreçlerini değiştirin. Örneğin, mutex kilitleme, semafor veya başka bir senkronizasyon yöntemi kullanabilirsiniz.
-2. **Simülasyonu Tekrar Çalıştırın 🔄:** Kilitleme stratejisini değiştirdikten sonra simülasyonu yeniden çalıştırın. Felsefecilerin çatal alma davranışını ve senkronizasyonu gözlemleyin.
-3. **Sonuçları Karşılaştırın ⚖️:** Farklı kilitleme stratejileriyle elde edilen sonuçları karşılaştırın. Kilitlenme veya açlık durumlarının nasıl etkilendiğini inceleyin.
+1. **Change the Locking Strategy 🔄:** Use different approaches (mutexes, semaphores, etc.).
+2. **Re-run the Simulation 🔄:** Observe the behavior under each strategy.
+3. **Compare Results ⚖️:** Evaluate which strategy performs better in preventing issues.
 
-### 3: Farklı Senkronizasyon Mekanizmalarını Deneyin
-Senkronizasyon sorunlarını çözmek için çeşitli mekanizmalar kullanılabilir. Bu senaryoda, farklı senkronizasyon mekanizmalarını deneyerek en iyi çözümü bulmaya çalışın:
+### 3: Experiment with Different Synchronization Mechanisms
+Try various synchronization methods and analyze their effectiveness.
 
-1. **Farklı Senkronizasyon Mekanizmalarını Seçin 🧩:** Mutex kilitleme, semaforlar, kritik bölgeler gibi çeşitli senkronizasyon tekniklerini kullanarak simülasyonu deneyin.
-2. **Simülasyonu Çalıştırın ve Gözlemleyin 👀:** Seçilen senkronizasyon mekanizmasıyla simülasyonu çalıştırın. Felsefecilerin davranışını gözlemleyin ve senkronizasyon sorunlarını analiz edin.
-3. **En İyi Mekanizmayı Belirleyin 🥇:** Çeşitli senkronizasyon mekanizmalarının sonuçlarını karşılaştırın. En iyi senkronizasyon stratejisini bulmaya çalışın.
+1. **Select a Mechanism 🧩:** Choose from mutexes, semaphores, or other techniques.
+2. **Run and Observe 👀:** Watch how the simulation behaves under the selected mechanism.
+3. **Find the Best Strategy 🥇:** Compare outcomes and determine the optimal approach.
 
-## 4: Senkronizasyon Sorunlarını ve Çözüm Önerilerini Analiz Edin
-Bu senaryoda, ortaya çıkan senkronizasyon sorunlarını analiz ederek uygun çözüm önerilerini belirleyin:
+## 4: Analyze Synchronization Issues and Propose Solutions
+Investigate synchronization problems and apply appropriate fixes.
 
-1. **Senkronizasyon Sorunlarını Belirleyin 🛠️:** Simülasyon sırasında meydana gelen kilitlenme veya açlık gibi sorunları tanımlayın. Felsefecilerin hangi durumlarda bu sorunları yaşadığını gözlemleyin.
-2. **Çözüm Önerilerini Araştırın 📚:** Bu sorunları önlemek için kullanılan farklı çözüm önerilerini araştırın. Örneğin, kilitlenme önleme algoritmaları veya felsefeciler için öncelik düzenlemeleri.
-3. **Uygun Çözümleri Uygulayın 🔧:** Belirlediğiniz çözüm önerilerini simülasyonda uygulayın ve sonucu gözlemleyin. Çözüm önerilerinin senkronizasyon sorunlarını nasıl etkilediğini analiz edin.
+1. **Identify Issues 🛠️:** Watch for deadlock, starvation, or race conditions.
+2. **Research Solutions 📚:** Look into solutions like resource hierarchy or priority mechanisms.
+3. **Apply Fixes 🔧:** Implement and test changes, and analyze their impact.
 
-<!-- Katkıda Bulunma -->
-## Katkıda Bulunma 🤝
-<p>Bu projeye katkıda bulunmak için aşağıdaki adımları takip edin:</p>
+<!-- Contribution -->
+## Contributing 🤝
+<p>To contribute to this project, follow these steps:</p>
 <ol>
-  <li><strong>Fork Yapın 🔄:</strong> Projeyi kendi GitHub hesabınıza fork yapın ve değişiklikler yapmak için kendi kopyanızı oluşturun.</li>
-  <li><strong>Değişiklikler Yapın 🛠️:</strong> Kendi ortamınızda geliştirmeler yapın ve değişikliklerinizi test edin.</li>
-  <li><strong>Pull Request Gönderin 📩:</strong> Değişikliklerinizi göndermek için bir pull request oluşturun ve açıklamalar ekleyin.</li>
+  <li><strong>Fork the Repository 🔄:</strong> Create a copy of the project under your GitHub account.</li>
+  <li><strong>Make Changes 🛠️:</strong> Implement improvements in your local environment.</li>
+  <li><strong>Submit a Pull Request 📩:</strong> Share your changes by creating a pull request and explaining your additions.</li>
 </ol>
 
-<!-- Lisans -->
-## Lisans 📜
-<p>Bu proje, <a href="LICENSE">MIT Lisansı</a> kapsamında lisanslanmıştır. Lisans detaylarını öğrenmek için lütfen lisans dosyasını kontrol edin.</p>
+<!-- License -->
+## License 📜
+<p>This project is licensed under the <a href="LICENSE">MIT License</a>. See the license file for details.</p>
 
 ---
 
 <p align="center">2025 This project was created by Derya ACAR.</p>
-
